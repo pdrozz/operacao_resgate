@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".activity.NovaOcorrenciaActivity">
+
+    <include
+        android:id="@+id/includeToolbar"
+        layout="@layout/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/includeToolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/contentMargin"
+            android:layout_marginRight="@dimen/contentMargin"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textNovaOcorrencia"
+                android:textSize="@dimen/textTitleLoginSize"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textResponsavelOperacao"
+                android:textSize="18sp"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btnAdicionarResponsavel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_mainbutton"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:onClick="btnResponsavel"
+                android:text="Adicionar responsável"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textVoluntarios"
+                android:textSize="18sp"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold"/>
+
+
+            <Button
+                android:id="@+id/btnAdicionarVoluntario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_mainbutton"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:onClick="btnVoluntario"
+                android:text="Adicionar voluntário(a)"/>
+
+            <!--NUMERO OCORRENCIA-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textNumeroOcorrencia"
+                android:textSize="@dimen/textSubtitleSize"
+                android:textColor="@color/textColorPrimary"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/numeroOcorrencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext"
+                android:hint="Ex: 170820/1292"
+                android:paddingTop="8dp"
+                android:inputType="number"
+                android:paddingBottom="8dp"
+                android:paddingLeft="26dp"
+                android:paddingRight="12dp"
+                android:textSize="20sp" />
+
+            <!--Gerada / Finalizada-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textHorarioOcorrencia"
+                android:textSize="24sp"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textGeradaAs"
+                android:layout_marginTop="8dp"
+                android:textSize="@dimen/textSubtitleSize"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/editGerada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext"
+                android:hint="Ex: 12:43"
+                android:inputType="number"
+                android:maxLength="5"
+                android:layout_marginTop="4dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="26dp"
+                android:paddingRight="12dp"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ocorrência finalizada às:"
+                android:layout_marginTop="8dp"
+                android:textSize="@dimen/textSubtitleSize"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/editFinalizada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext"
+                android:hint="Ex: 14:00"
+                android:maxLength="5"
+                android:layout_marginTop="4dp"
+                android:inputType="number"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="26dp"
+                android:paddingRight="12dp"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorLine"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"/>
+
+            <!--TIPO DE OCORRENCIA-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textTipoOcorrencia"
+                android:layout_marginTop="8dp"
+                android:textSize="@dimen/textSubtitleSize"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold"/>
+
+
+            <Spinner
+                android:id="@+id/spinnerTipoOcorrencia"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="12dp"
+                />
+
+
+            <CheckBox
+                android:id="@+id/checkedTipoOcorrencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Outro?"/>
+
+
+            <EditText
+                android:id="@+id/editTipoOcorrencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext"
+                android:hint="@string/hintTipoOcorrencia"
+                android:layout_marginTop="4dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="26dp"
+                android:enabled="false"
+                android:paddingRight="12dp"
+                android:textSize="20sp" />
+
+
+            <!--Origem ocorrencia-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textOrigemOcorrencia"
+                android:layout_marginTop="8dp"
+                android:textSize="@dimen/textSubtitleSize"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold"/>
+
+            <Spinner
+                android:id="@+id/spinnerOrigem"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="12dp"
+                />
+
+            <CheckBox
+                android:id="@+id/checkedOrigemOutro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Outro?"/>
+
+            <EditText
+                android:id="@+id/editOrigem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext"
+                android:hint="Origem"
+                android:enabled="false"
+                android:layout_marginTop="4dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="26dp"
+                android:paddingRight="12dp"
+                android:textSize="20sp" />
+
+
+            <!--Endereço-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textEndereco"
+                android:layout_marginTop="8dp"
+                android:textSize="@dimen/textSubtitleSize"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/editEndereco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext"
+                android:hint="Endereço"
+                android:layout_marginTop="4dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="26dp"
+                android:paddingRight="12dp"
+                android:textSize="20sp" />
+
+
+            <!--Descricao-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Descrição da Ocorrência:"
+                android:layout_marginTop="8dp"
+                android:textSize="@dimen/textSubtitleSize"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/editDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext"
+                android:lines="5"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="start|top"
+                android:gravity="start"
+                android:paddingTop="12dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="26dp"
+                android:paddingRight="12dp"
+                android:textSize="20sp" />
+
+
+            <!--Tipo do animal envolvido-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textTipoAnimal"
+                android:layout_marginTop="8dp"
+                android:textSize="@dimen/textSubtitleSize"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/editTipoAnimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext"
+                android:hint="Ex: Animais Domésticos"
+                android:layout_marginTop="4dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="26dp"
+                android:paddingRight="12dp"
+                android:textSize="20sp" />
+
+
+            <!--Qual animal-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textQualAnimal"
+                android:layout_marginTop="8dp"
+                android:textSize="@dimen/textSubtitleSize"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/editQualAnimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext"
+                android:hint="Ex: Cão"
+                android:layout_marginTop="4dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="26dp"
+                android:paddingRight="12dp"
+                android:textSize="20sp" />
+
+
+            <!--Telefone-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textTelefone"
+                android:layout_marginTop="8dp"
+                android:textSize="@dimen/textSubtitleSize"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/editTelefone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext"
+                android:hint="Ex: (47) 98754-3445"
+                android:layout_marginTop="4dp"
+                android:paddingTop="8dp"
+                android:inputType="phone"
+                android:paddingBottom="8dp"
+                android:paddingLeft="26dp"
+                android:paddingRight="12dp"
+                android:textSize="20sp" />
+
+            <!--Imagens-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textImagens"
+                android:layout_marginTop="8dp"
+                android:textSize="@dimen/textSubtitleSize"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btnImagensAnexadas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_mainbutton"
+                android:textColor="#fff"
+                android:onClick="verImagensAnexadas"
+                android:layout_marginBottom="12dp"
+                android:textStyle="bold"
+                android:text="Ver imagens anexadas"/>
+
+            <Button
+                android:id="@+id/btnAnexarImagem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_mainbutton"
+                android:textColor="#fff"
+                android:layout_marginBottom="12dp"
+                android:onClick="showAlertDialog"
+                android:textStyle="bold"
+                android:text="Anexar imagem"/>
+
+            <Button
+                android:id="@+id/btnGerarPdf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_button_corners_top"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:onClick="genereratePdf"
+                android:layout_marginTop="18dp"
+                android:text="Gerar PDF"/>
+
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

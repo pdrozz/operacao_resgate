@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0865C2</color>
+    <color name="colorPrimaryDark">#087dc2</color>
+    <color name="colorAccent">#ed1b24</color>
+
+    <!--TEXT COLORS-->
+    <color name="textColorPrimary">#000000</color>
+    <color name="textTitle">#9b2915</color>
+    <color name="textTitleSecondary">#970E14</color>
+
+
+    <!--DRAWABLE COLORS-->
+    <color name="editTextBackground">#FFFFFF</color>
+    <color name="editTextStrokes">#E6E6E6</color>
+    <color name="bg_image_placeholder">#5c80bc</color>
+    <color name="colorLine">#000</color>
+
+</resources>

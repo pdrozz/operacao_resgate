@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Grupo Operações e Resgate</string>
+    <string name="default_notification_channel_id">fcm_default_channel</string>
+
+
+    <string name="fichaTratamentoRodape">OBS: O número da ficha de tratamento é o mesmo número da ficha de resgate, do atestado de maus tratos, do termo de adoção e do atestado de óbito</string>
+    <string name="fichaTratamentoEspecieCanina">( X ) Canina     ( ) Felina     ( )Equina </string>
+    <string name="fichaTratamentoEspecieFelina">( ) Canina     ( X )Felina     ( )Equina </string>
+    <string name="fichaTratamentoEspecieEquina">( ) Canina     ( )Felina     ( X )Equina: </string>
+    <string name="fichaTratamentoSexoFemea">Sexo: ( X ) Fêmea (  ) Macho </string>
+    <string name="fichaTratamentoSexoMacho">Sexo: (  ) Fêmea ( X ) Macho </string>
+    <!--ACTIVITY NOVA OCORRENCIA-->
+    <!--TEXTVIEWS-->
+    <string name="textNovaOcorrencia">Nova Ocorrência:</string>
+    <string name="textResponsavelOperacao">Responsável pela Operação:</string>
+    <string name="textVoluntarios">Voluntários Participantes:</string>
+    <string name="textNumeroOcorrencia">Número Ocorrência:</string>
+    <string name="textHorarioOcorrencia">Horário Ocorrência:</string>
+    <string name="textGeradaAs">Ocorrência gerada às:</string>
+    <string name="textTipoOcorrencia">Tipo de Ocorrência:</string>
+    <string name="hintTipoOcorrencia">Ex: Denúncia de Maus-tratos</string>
+    <string name="textOrigemOcorrencia">Origem da Ocorrência:</string>
+    <string name="textEndereco">Endereço:</string>
+    <string name="textTipoAnimal">Tipo do animal envolvido:</string>
+    <string name="textQualAnimal">Qual o animal:</string>
+    <string name="textTelefone">Telefone:</string>
+    <string name="textImagens">Imagens:</string>
+    <string name="textImagem">Imagem:</string>
+
+    <!--ACTIVITY ORIENTACOES-->
+    <!--TEXT checkbox-->
+    <string name="checkNutricao1">Alimentar o animal com ração conforme orientação do fabricante.</string>
+    <string name="checkNutricao2">Alimentar o animal de duas a três vez por dia.</string>
+    <string name="checkNutricao3">Melhorar a higiene do bebedouro.</string>
+    <string name="checkNutricao4">Melhorar a higiene do comedouro.</string>
+    <string name="checkNutricao5">Manter um comedouro para cada animal.</string>
+    <string name="checkNutricao6">Manter um bebedouro sempre com água fresca e limpa.</string>
+
+    <string name="checkSanidade1">Providenciar a vacinação do animal. Deverá ser feita anualmente com o médico veterinário.</string>
+    <string name="checkSanidade2">Providenciar a vermifugação do animal.</string>
+    <string name="checkSanidade3">Levar o animal ao médico veterinário para tratamento de lesões e/ou doença.</string>
+    <string name="checkSanidade4">Providenciar a aplicação de medicamento antipulgas.</string>
+
+    <string name="checkConforto1">Aumentar a área destinada ao animal</string>
+    <string name="checkConforto2">Providenciar cama ou cobertores limpos ou local confortável para descanso.</string>
+    <string name="checkConforto3">Providenciar casinha ou abrigo fixo para proteção contra sol e chuva.</string>
+    <string name="checkConforto4">Limitar o acesso do animal à rua (somente com guia).</string>
+    <string name="checkConforto5">Melhorar a higiene do local onde o animal permanece.</string>
+    <string name="checkConforto6">Recolher os dejetos do animal mais frequentemente.</string>
+
+    <string name="checkComportamento1">Para animais que vivem sozinhos: providenciar passeios diários com guia para encontrar outros animas (exemplo: parques, vizinhos).</string>
+    <string name="checkComportamento2">Brincar com o animal sempre que possível. Cães e gatos gostam de brincar durante toda a sua vida.</string>
+    <string name="checkComportamento3">Animais que permanecem em corrente: providenciar um fio de arame em toda a extenção do terreno para aumentar a área destinada ao animal.</string>
+    <string name="checkComportamento4">Para animais que permanecem presos em canil: providenciar passeios diários no quintal da residência ou em área externa (sempre com guia).</string>
+    <string name="checkComportamento5">Providenciar brinquedos, bolinhas de plástico e/ou garrafas para animais brincarem.</string>
+
+</resources>

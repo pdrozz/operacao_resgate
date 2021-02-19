@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    tools:context=".activity.FichaTratamentoActivity">
+
+    <include
+    android:id="@+id/includeToolbar"
+    layout="@layout/main_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/includeToolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/contentMargin"
+        android:layout_marginRight="@dimen/contentMargin"
+        android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ficha de Tratamento"
+        android:textSize="@dimen/textTitleOrientacoesSize"
+        android:textColor="@color/textColorPrimary"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp"
+        />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Número da ficha:"
+            android:textSize="18sp"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/numeroFicha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext"
+            android:hint="Ex: 170820"
+            android:paddingTop="8dp"
+            android:inputType="number"
+            android:paddingBottom="8dp"
+            android:paddingLeft="26dp"
+            android:paddingRight="12dp"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Espécie: "
+            android:textSize="18sp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/groupEspecie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioCao"
+                android:text="Cão"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <RadioButton
+                android:id="@+id/radioGato"
+                android:text="Gato"
+                android:checked="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <RadioButton
+                android:id="@+id/radioEquino"
+                android:text="Equino"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/linearEquino"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Equina:"
+            android:textSize="18sp"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/editEquina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext"
+            android:hint=""
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="26dp"
+            android:paddingRight="12dp"
+            android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Espécie: "
+            android:textSize="18sp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/groupSexo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioFemea"
+                android:text="Fêmea"
+                android:checked="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <RadioButton
+                android:id="@+id/radioMacho"
+                android:text="Macho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RadioGroup>
+
+        <!--pelagem-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pelagem:"
+            android:textSize="18sp"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/editPelagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="26dp"
+            android:paddingRight="12dp"
+            android:textSize="20sp" />
+
+        <!--Carecterísticas-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Características:"
+            android:textSize="18sp"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/editCaracteristicas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="26dp"
+            android:paddingRight="12dp"
+            android:textSize="20sp" />
+
+        <!--data inicio-tratamento-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data início tratamento:"
+            android:textSize="18sp"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/editDataInicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext"
+            android:inputType="number"
+            android:hint="Ex: 02/12/2021"
+            android:maxLength="10"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="26dp"
+            android:paddingRight="12dp"
+            android:textSize="20sp" />
+
+
+        <!--Anammese/suspeita clinica-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Anammase/suspeita clínica: "
+            android:textSize="18sp"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/editSuspeitaClinica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="26dp"
+            android:paddingRight="12dp"
+            android:textSize="20sp" />
+
+        <!--procedimentos-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Procedimentos: "
+            android:textSize="18sp"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/editProcedimentos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="26dp"
+            android:paddingRight="12dp"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medicamentos: "
+            android:textSize="22sp"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:background="@drawable/bg_list"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <!--medicamento qnt-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Medicamento: "
+                android:textSize="18sp"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="Qntd: "
+                android:textSize="18sp"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--medicamento-->
+
+            <EditText
+                android:id="@+id/editMedicamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext"
+                android:layout_weight="2"
+                android:layout_marginRight="6dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="26dp"
+                android:paddingRight="12dp"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/editQuantidade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext"
+                android:layout_weight="4"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="12dp"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <!--medicamento dose e via-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Dose: "
+                android:textSize="18sp"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Via: "
+                android:textSize="18sp"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--medicamento-->
+
+            <EditText
+                android:id="@+id/editDose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext"
+                android:layout_weight="1"
+                android:layout_marginRight="6dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="26dp"
+                android:paddingRight="12dp"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/editVia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext"
+                android:layout_weight="1"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="12dp"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <!--Duracao Periodo-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Duração: "
+                android:textSize="18sp"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Período: "
+                android:textSize="18sp"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--medicamento-->
+
+            <EditText
+                android:id="@+id/editDuracao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext"
+                android:layout_weight="1"
+                android:layout_marginRight="6dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="26dp"
+                android:paddingRight="12dp"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/editPeriodo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext"
+                android:layout_weight="1"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="12dp"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnAdicionarItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_mainbutton"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:onClick="adicionarMedicamento"
+            android:layout_marginTop="10dp"
+            android:text="Adicionar"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="6dp"/>
+
+        </LinearLayout>
+
+        <!--data alta-clinica-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data alta clínica:"
+            android:textSize="18sp"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/editDataAlta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext"
+            android:inputType="number"
+            android:maxLength="10"
+            android:hint="Ex: 02/12/2021"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="26dp"
+            android:paddingRight="12dp"
+            android:textSize="20sp" />
+
+        <!--OBITO-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Óbito: "
+            android:textSize="18sp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/groupObito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioSim"
+                android:text="Sim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <RadioButton
+                android:id="@+id/radioNão"
+                android:text="Não"
+                android:checked="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RadioGroup>
+
+
+        <!--se obito data e causa-->
+        <LinearLayout
+            android:id="@+id/linearObito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <!--DATA-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data do óbito:"
+            android:textSize="18sp"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/editDataObito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext"
+            android:inputType="number"
+            android:hint="Ex: 02/12/2021"
+            android:maxLength="10"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="26dp"
+            android:paddingRight="12dp"
+            android:textSize="20sp" />
+            <!--causa-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Causa da morte:"
+            android:textSize="18sp"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/editCausa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="26dp"
+            android:paddingRight="12dp"
+            android:textSize="20sp" />
+        </LinearLayout>
+
+        <!--DATA E LOCAL DESTINACAO-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Destino: "
+            android:textSize="18sp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/groupDestino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioRetorno"
+                android:text="Retornado ao local do resgate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <RadioButton
+                android:id="@+id/radioDoacao"
+                android:text="Doação"
+                android:checked="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <RadioButton
+                android:id="@+id/radioOutro"
+                android:text="Outro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/linearDestino"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Outro destino:"
+                android:textSize="18sp"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/editDestino"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext"
+                android:hint="Ex: 10/02/2022"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="26dp"
+                android:paddingRight="12dp"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <!--Anammese/suspeita clinica-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data do destino: "
+            android:textSize="18sp"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/editDataDestino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext"
+            android:paddingTop="8dp"
+            android:inputType="number"
+            android:paddingBottom="8dp"
+            android:paddingLeft="26dp"
+            android:paddingRight="12dp"
+            android:textSize="20sp" />
+
+
+        <!--anexar imgem-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/textImagem"
+            android:layout_marginTop="8dp"
+            android:textSize="@dimen/textSubtitleSize"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnAnexarImagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_mainbutton"
+            android:textColor="#fff"
+            android:onClick="anexrImagemAnimal"
+            android:layout_marginBottom="12dp"
+            android:textStyle="bold"
+            android:text="Anexar imagem do animal"/>
+
+        <Button
+            android:id="@+id/verImagemAnexada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_mainbutton"
+            android:textColor="#fff"
+            android:onClick="verImagemAnexada"
+            android:layout_marginBottom="12dp"
+            android:textStyle="bold"
+            android:text="Ver imagem anexada"/>
+
+        <!--assinatura-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Assinatura: "
+            android:textSize="18sp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnAssinaturaMedico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_mainbutton"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:onClick="assinatura"
+            android:text="Adicionar Assinatura Médico(a) Vet."/>
+
+
+        <Button
+            android:id="@+id/btnGerarPdf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button_corners_top"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:onClick="generatePdf"
+            android:layout_marginTop="18dp"
+            android:text="Gerar PDF"/>
+
+
+    </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

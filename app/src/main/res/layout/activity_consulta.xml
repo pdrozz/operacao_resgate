@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ConsultaActivity">
+
+    <include
+        android:id="@+id/includeToolbar"
+        layout="@layout/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/includeToolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="@dimen/contentMargin"
+        android:layout_marginRight="@dimen/contentMargin"
+        android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/editSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_edittext"
+        android:hint="Pesquisar"
+        android:paddingTop="8dp"
+        android:drawableEnd="@drawable/ic_search"
+        android:paddingEnd="22dp"
+        android:drawableTint="@color/colorPrimaryDark"
+        android:paddingBottom="8dp"
+        android:paddingLeft="26dp"
+        android:paddingRight="8dp"
+        android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pesquisa: "
+            android:textSize="18sp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <RadioGroup
+                android:id="@+id/groupTipo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioOcorrencia"
+                    android:text="Ocorrências"
+                    android:layout_width="wrap_content"
+                    android:checked="true"
+                    android:layout_height="wrap_content"/>
+
+                <RadioButton
+                    android:id="@+id/radioTratamento"
+                    android:text="Ficha Tratamento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <RadioButton
+                    android:id="@+id/radioOrientacoes"
+                    android:text="Orientações"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RadioGroup>
+
+
+        <RadioGroup
+            android:id="@+id/groupPesquisa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioNumero"
+                android:text="Número Ocorrência"
+                android:layout_width="wrap_content"
+                android:checked="true"
+                android:layout_height="wrap_content"/>
+
+            <RadioButton
+                android:id="@+id/radioData"
+                android:text="Data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <RadioButton
+                android:id="@+id/radioEndereco"
+                android:text="Endereço"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RadioGroup>
+
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnAdicionarItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_mainbutton"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:onClick="search"
+            android:layout_marginTop="10dp"
+            android:text="Buscar"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recycler"/>
+
+
+
+    </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

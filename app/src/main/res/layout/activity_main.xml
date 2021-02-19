@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".activity.MainActivity">
+
+    <include
+    android:id="@+id/includeToolbar"
+    layout="@layout/main_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        app:layout_constraintTop_toBottomOf="@id/includeToolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_marginTop="28dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_options"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="12dp"
+                android:onClick="novaOcorrencia"
+                >
+
+                <ImageView
+                    android:padding="12dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/ic_novo_documento"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="2dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:lineSpacingExtra="10dp"
+                        android:lineHeight="2dp"
+                        android:text="Nova Ocorrência"
+                        android:textSize="26sp"
+                        android:textAlignment="center"
+                        android:textColor="@color/textTitle"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="Gerar nova ocorrência"
+                        android:textSize="16sp"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textColor="@color/textTitle"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="12dp"
+                android:onClick="fichaTratamento"
+                android:background="@drawable/bg_options"
+                >
+
+                <ImageView
+                    android:padding="12dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/ic_ficha"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="Ficha de Tratamento"
+                        android:textSize="26sp"
+                        android:textAlignment="center"
+                        android:textColor="@color/textTitle"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="Gerar nova ficha de tratamento"
+                        android:textSize="16sp"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textColor="@color/textTitle"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:onClick="Orientacao"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_options"
+                >
+
+                <ImageView
+                    android:padding="12dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/ic_orientacoes"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="Orientações para bem-estar do animal"
+                        android:textSize="26sp"
+                        android:textAlignment="center"
+                        android:textColor="@color/textTitle"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="Gerar nova ocorrência"
+                        android:textSize="16sp"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textColor="@color/textTitle"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:onClick="buscar"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_options"
+                >
+
+                <ImageView
+                    android:padding="12dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/ic_procurar"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="Consulta"
+                        android:textSize="26sp"
+                        android:textAlignment="center"
+                        android:textColor="@color/textTitle"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="Consultar Ocorrências"
+                        android:textSize="16sp"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textColor="@color/textTitle"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

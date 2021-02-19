@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "762274770540",
+    "firebase_url": "https://grupo-operacoes-e-resgate.firebaseio.com",
+    "project_id": "grupo-operacoes-e-resgate",
+    "storage_bucket": "grupo-operacoes-e-resgate.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:762274770540:android:47b22c4ec7b9a21023f249",
+        "android_client_info": {
+          "package_name": "com.pdrozzsolucoes.gor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "762274770540-s0rd39iriankkvcq6tsi88p561113452.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pdrozzsolucoes.gor",
+            "certificate_hash": "f63e7949518bdb60f657bd6ebe8394b8a644749b"
+          }
+        },
+        {
+          "client_id": "762274770540-a6ddji2fdvlf34n01ptce2vq6lrkg9ad.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2DNnUaygorLvDoYtD0LwuSJJC8kaeYyQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "762274770540-a6ddji2fdvlf34n01ptce2vq6lrkg9ad.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="editHeight">50dp</dimen>
+    <dimen name="textTitleLoginSize">28sp</dimen>
+    <dimen name="textTitleOrientacoesSize">24sp</dimen>
+
+    <dimen name="contentMargin">16dp</dimen>
+    <dimen name="textSubtitleSize">18sp</dimen>
+
+
+    <!--NOVA OCORRENCIA ACITIVTY-->
+    <!--TEXTVIEW-->
+    <string name="textTitleOcorrenciaSize">24sp</string>
+
+</resources>
